@@ -68,10 +68,10 @@ class _PointConversionPageState extends State<PointConversionPage> {
                         children: [
                       Container(
                         alignment: Alignment.centerLeft,
-                        padding: const EdgeInsets.fromLTRB(25, 10, 30, 0),
+                        padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
                         child: const Text(
                           'Enter Point Coordinates:',
-                          style: TextStyle(fontFamily: 'Times', fontSize: 30),
+                          style: TextStyle(fontFamily: 'Times', fontSize: 25),
                         ),
                       ),
                       const Divider(),
@@ -81,15 +81,15 @@ class _PointConversionPageState extends State<PointConversionPage> {
                             ButtonSegment(
                                 value: 1,
                                 icon: Icon(Icons.grid_4x4),
-                                label: Text('Cartesian')),
+                                label: Text('Cartesian',style: TextStyle(fontSize: 12),)),
                             ButtonSegment(
                                 value: 2,
                                 icon: Icon(Icons.circle_outlined),
-                                label: Text('Cylindrical')),
+                                label: Text('Cylindrical',style: TextStyle(fontSize: 12),)),
                             ButtonSegment(
                                 value: 3,
                                 icon: Icon(Icons.circle_rounded),
-                                label: Text('Spherical'))
+                                label: Text('Spherical',style: TextStyle(fontSize: 12),))
                           ],
                           selected: {
                             firstSelectedSeg
@@ -146,10 +146,10 @@ class _PointConversionPageState extends State<PointConversionPage> {
                       child: Column(children: [
                         Container(
                           alignment: Alignment.centerLeft,
-                          padding: const EdgeInsets.fromLTRB(25, 10, 30, 0),
+                          padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
                           child: const Text(
                             'Result Point Coordinates:',
-                            style: TextStyle(fontFamily: 'Times', fontSize: 30),
+                            style: TextStyle(fontFamily: 'Times', fontSize: 25),
                           ),
                         ),
                         Divider(),
@@ -159,15 +159,15 @@ class _PointConversionPageState extends State<PointConversionPage> {
                               ButtonSegment(
                                   value: 1,
                                   icon: Icon(Icons.grid_4x4),
-                                  label: Text('Cartesian')),
+                                  label: Text('Cartesian',style: TextStyle(fontSize: 12),)),
                               ButtonSegment(
                                   value: 2,
                                   icon: Icon(Icons.circle_outlined),
-                                  label: Text('Cylindrical')),
+                                  label: Text('Cylindrical',style: TextStyle(fontSize: 12),)),
                               ButtonSegment(
                                   value: 3,
                                   icon: Icon(Icons.circle_rounded),
-                                  label: Text('Spherical'))
+                                  label: Text('Spherical',style: TextStyle(fontSize: 12),))
                             ],
                             selected: {
                               secondSelectedSeg

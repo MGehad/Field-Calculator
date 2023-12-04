@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutUs extends StatefulWidget {
   AboutUs({super.key,});
@@ -10,6 +11,20 @@ class AboutUs extends StatefulWidget {
 }
 
 class _AboutUsState extends State<AboutUs> {
+  final Uri _url1 = Uri.parse('https://www.linkedin.com/in/mgehad/');
+  final Uri _url2 = Uri.parse('https://www.linkedin.com/in/mgehad/');
+  final Uri _url3 = Uri.parse('https://www.linkedin.com/in/mgehad/');
+  final Uri _url4 = Uri.parse('https://www.linkedin.com/in/mahmoudgala1');
+  final Uri _url5 = Uri.parse('https://www.linkedin.com/in/mgehad/');
+
+  Future<void> _launchUrl(Uri uri) async {
+    if (await canLaunch(uri.toString())) {
+      await launch(uri.toString());
+    } else {
+      throw Exception('Could not launch $uri');
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,15 +83,66 @@ class _AboutUsState extends State<AboutUs> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Text(
-                      "\t\t\t 1.Mohamed Gehad Hussein"
-                          "\n\t\t\t 2.Kareem Salah"
-                          "\n\t\t\t 3.Hassan Mohamed Hassan"
-                          "\n\t\t\t 4.Mahmoud Galal Ramadan EL-Gendy"
-                          "\n\t\t\t 5.Shehab Shokri",
-                      style: TextStyle(
-                        fontSize: 16.0,
-                      ),
+                    Row(
+                      children: [
+                        InkWell(
+                            onTap: () {
+                              _launchUrl(_url1);
+                            },
+                            child: Icon(Icons.person,size: 16)
+                        ),
+                        Text("\tMohamed Gehad Hussein",style: TextStyle(
+                          fontSize: 16.0,
+                        ),)
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        InkWell(
+                            onTap: () {
+                              _launchUrl(_url2);
+                            },
+                            child: Icon(Icons.person,size: 16)
+                        ),                        Text("\tKareem Salah EL-Din EL-Ghamry",style: TextStyle(
+                          fontSize: 16.0,
+                        ),)
+                      ],
+                    ),Row(
+                      children: [
+                        InkWell(
+                            onTap: () {
+                              _launchUrl(_url3);
+                            },
+                            child: Icon(Icons.person,size: 16)
+                        ),
+                        Text("\tHassan Mohamed Hassan Ali",style: TextStyle(
+                          fontSize: 16.0,
+                        ),)
+                      ],
+                    ),Row(
+                      children: [
+                        InkWell(
+                            onTap: () {
+                              _launchUrl(_url4);
+                            },
+                            child: Icon(Icons.person,size: 16)
+                        ),
+                        Text("\tMahmoud Galal Ramadan EL-Gendy",style: TextStyle(
+                          fontSize: 16.0,
+                        ),)
+                      ],
+                    ),Row(
+                      children: [
+                        InkWell(
+                            onTap: () {
+                              _launchUrl(_url5);
+                            },
+                            child: Icon(Icons.person,size: 16)
+                        ),
+                        Text("\tShehap Shokri Ghazal",style: TextStyle(
+                          fontSize: 16.0,
+                        ),)
+                      ],
                     ),
                     SizedBox(height: 20.0),
                     Text(

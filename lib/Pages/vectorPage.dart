@@ -82,7 +82,7 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
                       child: Column(children: [
                         Container(
                           alignment: Alignment.centerLeft,
-                          padding: const EdgeInsets.fromLTRB(25, 10, 30, 0),
+                          padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
                           child: const Text(
                             'Enter Vector Components:',
                             style: TextStyle(fontFamily: 'Times', fontSize: 25),
@@ -95,15 +95,15 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
                               ButtonSegment(
                                   value: 1,
                                   icon: Icon(Icons.grid_4x4),
-                                  label: Text('Cartesian')),
+                                  label: Text('Cartesian',style: TextStyle(fontSize: 12),)),
                               ButtonSegment(
                                   value: 2,
                                   icon: Icon(Icons.circle_outlined),
-                                  label: Text('Cylindrical')),
+                                  label: Text('Cylindrical',style: TextStyle(fontSize: 12),)),
                               ButtonSegment(
                                   value: 3,
                                   icon: Icon(Icons.circle_rounded),
-                                  label: Text('Spherical'))
+                                  label: Text('Spherical',style: TextStyle(fontSize: 12),))
                             ],
                             selected: {
                               firstSelectedSeg
@@ -146,7 +146,7 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
                         const Divider(),
                         Container(
                           alignment: Alignment.centerLeft,
-                          padding: const EdgeInsets.fromLTRB(25, 0, 30, 10),
+                          padding: const EdgeInsets.fromLTRB(15, 0, 0, 10),
                           child: const Text(
                             'At Point:',
                             style: TextStyle(fontFamily: 'Times', fontSize: 25),
@@ -157,15 +157,15 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
                               ButtonSegment(
                                   value: 1,
                                   icon: Icon(Icons.grid_4x4),
-                                  label: Text('Cartesian')),
+                                  label: Text('Cartesian',style: TextStyle(fontSize: 12),)),
                               ButtonSegment(
                                   value: 2,
                                   icon: Icon(Icons.circle_outlined),
-                                  label: Text('Cylindrical')),
+                                  label: Text('Cylindrical',style: TextStyle(fontSize: 12),)),
                               ButtonSegment(
                                   value: 3,
                                   icon: Icon(Icons.circle_rounded),
-                                  label: Text('Spherical'))
+                                  label: Text('Spherical',style: TextStyle(fontSize: 12),))
                             ],
                             selected: {
                               pointSelectedSeg
@@ -221,7 +221,7 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
                         child: Column(children: [
                           Container(
                             alignment: Alignment.centerLeft,
-                            padding: const EdgeInsets.fromLTRB(25, 10, 30, 0),
+                            padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
                             child: const Text(
                               'Result Vector Components:',
                               style: TextStyle(fontFamily: 'Times', fontSize: 25),
@@ -234,15 +234,15 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
                                 ButtonSegment(
                                     value: 1,
                                     icon: Icon(Icons.grid_4x4),
-                                    label: Text('Cartesian')),
+                                    label: Text('Cartesian',style: TextStyle(fontSize: 12),)),
                                 ButtonSegment(
                                     value: 2,
                                     icon: Icon(Icons.circle_outlined),
-                                    label: Text('Cylindrical')),
+                                    label: Text('Cylindrical',style: TextStyle(fontSize: 12),)),
                                 ButtonSegment(
                                     value: 3,
                                     icon: Icon(Icons.circle_rounded),
-                                    label: Text('Spherical'))
+                                    label: Text('Spherical',style: TextStyle(fontSize: 12),))
                               ],
                               selected: {
                                 secondSelectedSeg
@@ -335,6 +335,8 @@ class _VectorConversionPageState extends State<VectorConversionPage> {
     }
 
     resultControl.text =
-        "${B[0].toStringAsFixed(3)}${secondCurrentLabels[0]}, ${B[1].toStringAsFixed(3)}${secondCurrentLabels[1]}, ${B[2].toStringAsFixed(2)}${secondCurrentLabels[3]}";
+        "${B[0].toStringAsFixed(3)}${secondCurrentLabels[0]}, "
+            "${B[1].toStringAsFixed(3)}${secondCurrentLabels[1]},"
+            " ${B[2].toStringAsFixed(3)}${secondCurrentLabels[2]}";
   }
 }

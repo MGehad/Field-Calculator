@@ -124,7 +124,7 @@ class _HomeState extends State<Home> {
               borderRadius: BorderRadius.circular(15),
               onTap: () {
                 Navigator.of(context).push(
-                  MaterialPageRoute(builder:(context) => VectorConversionPage(title: 'Vector Conversion'))
+                  MaterialPageRoute(builder:(context) => PointConversionPage(title: 'Vector Conversion'))
                 );
               },
               child: Ink(
