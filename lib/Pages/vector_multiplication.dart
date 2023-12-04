@@ -94,7 +94,7 @@ class _VectorMultiplicationState extends State<VectorMultiplication> {
                     padding: const EdgeInsets.all(8),
                     child: Text(
                       "Calculate",
-                      style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 25,color: Colors.white),
                     ),
                   ),
                 ),

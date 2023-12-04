@@ -1,4 +1,6 @@
 import 'package:field_calculator/Pages/about_us.dart';
+import 'package:field_calculator/Pages/pointPage.dart';
+import 'package:field_calculator/Pages/vectorPage.dart';
 import 'package:field_calculator/Pages/vector_multiplication.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -80,7 +82,9 @@ class _HomeState extends State<Home> {
             InkWell(
               borderRadius: BorderRadius.circular(15),
               onTap: () {
-                
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder:(context) => VectorConversionPage(title: 'Vector Conversion'))
+                );
               },
               child: Ink(
                 child: Tooltip(
@@ -100,6 +104,47 @@ class _HomeState extends State<Home> {
                               Icon(Icons.change_circle_outlined,size: 25),
                               SizedBox(width: 10,),
                               Text("Coordinates Convertor",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.w500)),
+                            ],
+                          ),
+                          Icon(Icons.chevron_right,
+                            size:22 ,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
+            InkWell(
+              borderRadius: BorderRadius.circular(15),
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder:(context) => VectorConversionPage(title: 'Vector Conversion'))
+                );
+              },
+              child: Ink(
+                child: Tooltip(
+                  message: 'Go To Point Conversion',
+                  child: Container(
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.grey.shade300
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15.0,right: 15,bottom: 20,top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.change_circle_outlined,size: 25),
+                              SizedBox(width: 10,),
+                              Text("Point Convertor",
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.w500)),

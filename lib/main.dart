@@ -23,15 +23,15 @@ class _MyAppState extends State<MyApp> {
         colorScheme: ColorScheme(
             brightness: Brightness.light,
             primary: Colors.indigo, onPrimary: Colors.white,
-            secondary: Colors.transparent, onSecondary: Colors.transparent,
+            secondary: Colors.indigo, onSecondary: Colors.white,
             error: Colors.red, onError: Colors.red,
             background: Colors.white, onBackground: Colors.grey.shade700,
             surface: Colors.indigo, onSurface: Colors.indigo.shade700),
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(Colors.grey.shade300),
-          )
-        )
+            backgroundColor: MaterialStatePropertyAll(Colors.indigo),
+            textStyle:MaterialStatePropertyAll(TextStyle(fontFamily: 'Times', fontSize: 22),)          )
+        ),
       ),
     );
   }
