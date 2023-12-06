@@ -1,4 +1,4 @@
-# Field Calculator
+# field_calculator
 
 A new Flutter project.
 

@@ -127,4 +127,3 @@ List<double> cylindricalVectorToSpherical(
       cartesianVector[0], cartesianVector[1], cartesianVector[2], point);
   return sphericalVector;
 }
-

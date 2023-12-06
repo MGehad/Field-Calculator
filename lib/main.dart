@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'Pages/Home.dart';
+import 'Pages/HomePage.dart';
+import 'Pages/HistoryPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,31 +10,35 @@ class MyApp extends StatefulWidget {
   MyApp({super.key});
   @override
   State<MyApp> createState() => _MyAppState();
-
 }
 
-class _MyAppState extends State<MyApp> {
+List<HistoryCardData> historyDataList = [];
 
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
-          useMaterial3: true,
+        useMaterial3: true,
         colorScheme: ColorScheme(
-            brightness: Brightness.light,
-            primary: Colors.indigo, onPrimary: Colors.white,
-            secondary: Colors.indigo, onSecondary: Colors.white,
-            error: Colors.red, onError: Colors.red,
-            background: Colors.white, onBackground: Colors.grey.shade700,
-            surface: Colors.indigo, onSurface: Colors.indigo.shade700),
-        textButtonTheme: TextButtonThemeData(
-          style: ButtonStyle(
-            backgroundColor: MaterialStatePropertyAll(Colors.indigo),
-            textStyle:MaterialStatePropertyAll(TextStyle(fontFamily: 'Times', fontSize: 22),)          )
+          brightness: Brightness.light,
+          primary: Colors.blue.shade600,
+          onPrimary: Colors.white,
+          secondary: Colors.blue.shade500,
+          onSecondary: Colors.white,
+          error: Colors.red,
+          onError: Colors.red,
+          background: Colors.white,
+          onBackground: Colors.grey.shade700,
+          surface: Colors.white,
+          onSurface: Colors.black,
+          onInverseSurface: Colors.blue.shade500,
+          inversePrimary: Colors.blue.shade100,
+          tertiary: Colors.blue.shade300,
         ),
       ),
     );
   }
-
 }
