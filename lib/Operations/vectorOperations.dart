@@ -4,10 +4,11 @@ double scalerProduct(List<double> A, List<double> B) {
 }
 
 List<double> crossProduct(List<double> A, List<double> B) {
-  List<double> result = List<double>.filled(3, 0.0, growable: false);
-  result[0] = A[1] * B[2] - A[2] * B[1];
-  result[1] = -1 * ((A[0] * B[2]) - (A[2] * B[0]));
-  result[2] = A[0] * B[1] - A[1] * B[0];
+  List<double> result = [
+    A[1] * B[2] - A[2] * B[1],
+    -(A[0] * B[2] - A[2] * B[0]),
+    A[0] * B[1] - A[1] * B[0]
+  ];
   return result;
 }
 
